@@ -387,7 +387,7 @@ public class SearchBar extends FrameLayout {
     }
 
     public DateTimeFormatter getSearchBarClockFormat(Integer id) {
-        if (_clockFormatterIndex != id && id > 0) {
+        if (!_clockFormatterIndex.equals(id) && id > 0) {
             if (_clockModes.containsKey(id)) {
                 return _clockModes.get(id);
             }

@@ -37,7 +37,7 @@ import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Pattern;
 
-@SuppressWarnings({"WeakerAccess", "unused", "SameParameterValue", "SpellCheckingInspection", "deprecation"})
+@SuppressWarnings({"WeakerAccess", "SameParameterValue", "SpellCheckingInspection"})
 public class FileUtils {
     // Used on methods like copyFile(src, dst)
     private static final int BUFFER_SIZE = 4096;
@@ -339,7 +339,6 @@ public class FileUtils {
         return true;
     }
 
-    @SuppressWarnings("ResultOfMethodCallIgnored")
     public static boolean renameFileInSameFolder(File srcFile, String destFilename) {
         return renameFile(srcFile, new File(srcFile.getParent(), destFilename));
     }

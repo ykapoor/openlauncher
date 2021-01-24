@@ -19,7 +19,7 @@ import android.support.v7.app.AlertDialog;
 
 import java.io.File;
 
-@SuppressWarnings({"unused", "WeakerAccess"})
+@SuppressWarnings({"WeakerAccess"})
 public class PermissionChecker {
     protected static final int CODE_PERMISSION_EXTERNAL_STORAGE = 4000;
 

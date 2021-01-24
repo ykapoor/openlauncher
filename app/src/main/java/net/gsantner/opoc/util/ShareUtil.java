@@ -78,7 +78,7 @@ import static android.app.Activity.RESULT_OK;
  * Also allows to parse/fetch information out of shared information.
  * (M)Permissions are not checked, wrap ShareUtils methods if neccessary
  */
-@SuppressWarnings({"UnusedReturnValue", "WeakerAccess", "SameParameterValue", "unused", "deprecation", "ConstantConditions", "ObsoleteSdkInt", "SpellCheckingInspection", "JavadocReference"})
+@SuppressWarnings({"UnusedReturnValue", "WeakerAccess", "SameParameterValue", "deprecation", "ObsoleteSdkInt", "SpellCheckingInspection", "JavadocReference"})
 public class ShareUtil {
     public final static String EXTRA_FILEPATH = "real_file_path_2";
     public final static SimpleDateFormat SDF_RFC3339_ISH = new SimpleDateFormat("yyyy-MM-dd'T'HH-mm-ss", Locale.getDefault());
@@ -977,7 +977,7 @@ public class ShareUtil {
             String safUriStr = safUri.toString();
             ContextUtils cu = new ContextUtils(_context);
             for (Pair<File, String> storage : cu.getStorages(false, true)) {
-                @SuppressWarnings("ConstantConditions") String storageFolderName = storage.first.getName();
+                String storageFolderName = storage.first.getName();
                 if (safUriStr.contains(storageFolderName)) {
                     return storage.first;
                 }

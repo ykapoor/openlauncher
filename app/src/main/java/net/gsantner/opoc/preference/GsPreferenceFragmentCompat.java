@@ -85,7 +85,7 @@ import java.util.Set;
 /**
  * Baseclass to use as preference fragment (with support libraries)
  */
-@SuppressWarnings({"WeakerAccess", "unused", "UnusedReturnValue"})
+@SuppressWarnings({"WeakerAccess", "UnusedReturnValue"})
 public abstract class GsPreferenceFragmentCompat<AS extends SharedPreferencesPropertyBackend> extends PreferenceFragmentCompat
         implements SharedPreferences.OnSharedPreferenceChangeListener, PreferenceFragmentCompat.OnPreferenceStartScreenCallback {
     private static final int DEFAULT_ICON_TINT_DELAY = 200;
@@ -334,7 +334,7 @@ public abstract class GsPreferenceFragmentCompat<AS extends SharedPreferencesPro
         updatePreference(keyResId, null, null, summary, null);
     }
 
-    /**
+    /*
      * Finds a {@link Preference} based on its key res id.
      *
      * @param key The key of the preference to retrieve.
@@ -350,7 +350,7 @@ public abstract class GsPreferenceFragmentCompat<AS extends SharedPreferencesPro
         return null;
     }
 
-    /**
+    /*
      * Finds a {@link Preference} based on its key res id.
      *
      * @param key The key of the preference to retrieve.
@@ -361,7 +361,7 @@ public abstract class GsPreferenceFragmentCompat<AS extends SharedPreferencesPro
         return isAdded() ? findPreference(getString(key)) : null;
     }
 
-    /**
+    /*
      * Finds a {@link Preference} based on its key res id.
      *
      * @param key The key of the preference to retrieve.

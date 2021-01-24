@@ -90,7 +90,7 @@ import static android.content.Context.VIBRATOR_SERVICE;
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 import static android.graphics.Bitmap.CompressFormat;
 
-@SuppressWarnings({"WeakerAccess", "unused", "SameParameterValue", "ObsoleteSdkInt", "deprecation", "SpellCheckingInspection", "TryFinallyCanBeTryWithResources", "UnusedAssignment"})
+@SuppressWarnings({"WeakerAccess", "SameParameterValue", "ObsoleteSdkInt", "deprecation", "SpellCheckingInspection", "TryFinallyCanBeTryWithResources", "UnusedAssignment"})
 public class ContextUtils {
     //
     // Members, Constructors
@@ -445,7 +445,7 @@ public class ContextUtils {
         Runtime.getRuntime().exit(0);
     }
 
-    /**
+    /*
      * Load a markdown file from a {@link RawRes}, prepend each line with {@code prepend} text
      * and convert markdown to html using {@link SimpleMarkdownParser}
      */
@@ -627,7 +627,6 @@ public class ContextUtils {
             return null;
         }
         for (Pair<File, String> storage : getStorages(false, true)) {
-            //noinspection ConstantConditions
             if (filepath.startsWith(storage.first.getAbsolutePath())) {
                 return storage.first;
             }
@@ -686,7 +685,7 @@ public class ContextUtils {
         return bitmap;
     }
 
-    /**
+    /*
      * Get a {@link Bitmap} out of a {@link DrawableRes}
      */
     public Bitmap drawableToBitmap(@DrawableRes final int drawableId) {
@@ -697,7 +696,7 @@ public class ContextUtils {
         }
     }
 
-    /**
+    /*
      * Get a {@link Bitmap} from a given {@code imagePath} on the filesystem
      * Specifying a {@code maxDimen} is also possible and a value below 2000
      * is recommended, otherwise a {@link OutOfMemoryError} may occur
@@ -792,7 +791,7 @@ public class ContextUtils {
         return false;
     }
 
-    /**
+    /*
      * Draw text in the center of the given {@link DrawableRes}
      * This may be useful for e.g. badge counts
      */
@@ -820,7 +819,6 @@ public class ContextUtils {
     /**
      * Try to tint all {@link Menu}s {@link MenuItem}s with given color
      */
-    @SuppressWarnings("ConstantConditions")
     public void tintMenuItems(final Menu menu, final boolean recurse, @ColorInt final int iconColor) {
         for (int i = 0; i < menu.size(); i++) {
             MenuItem item = menu.getItem(i);
@@ -835,14 +833,14 @@ public class ContextUtils {
         }
     }
 
-    /**
+    /*
      * Loads {@link Drawable} by given {@link DrawableRes} and applies a color
      */
     public Drawable tintDrawable(@DrawableRes final int drawableRes, @ColorInt final int color) {
         return tintDrawable(rdrawable(drawableRes), color);
     }
 
-    /**
+    /*
      * Tint a {@link Drawable} with given {@code color}
      */
     public Drawable tintDrawable(@Nullable Drawable drawable, @ColorInt final int color) {

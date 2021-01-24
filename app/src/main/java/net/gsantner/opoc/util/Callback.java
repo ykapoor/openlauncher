@@ -10,7 +10,6 @@
 #########################################################*/
 package net.gsantner.opoc.util;
 
-@SuppressWarnings("unused")
 public class Callback {
 
     public interface a0 {

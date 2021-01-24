@@ -39,7 +39,7 @@ import android.webkit.WebView;
 import android.widget.ScrollView;
 
 
-@SuppressWarnings({"WeakerAccess", "unused", "SameParameterValue", "SpellCheckingInspection"})
+@SuppressWarnings({"WeakerAccess", "SameParameterValue", "SpellCheckingInspection"})
 public class ActivityUtils extends net.gsantner.opoc.util.ContextUtils {
     //########################
     //## Members, Constructors

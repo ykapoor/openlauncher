@@ -54,7 +54,7 @@ import java.util.List;
  * Wrapper for settings based on SharedPreferences, optionally with keys in resources
  * Default SharedPreference (_prefApp) will be taken if no SP is specified, else the first one
  */
-@SuppressWarnings({"WeakerAccess", "unused", "SpellCheckingInspection", "SameParameterValue"})
+@SuppressWarnings({"WeakerAccess", "SpellCheckingInspection", "SameParameterValue"})
 public class SharedPreferencesPropertyBackend implements PropertyBackend<String, SharedPreferencesPropertyBackend> {
     protected static final String ARRAY_SEPARATOR = "%%%";
     protected static final String ARRAY_SEPARATOR_SUBSTITUTE = "§§§";

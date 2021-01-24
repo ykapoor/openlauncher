@@ -65,7 +65,7 @@ import java.util.Locale;
 /**
  * A {@link android.preference.ListPreference} that displays a list of languages to select from
  */
-@SuppressWarnings({"unused", "SpellCheckingInspection", "WeakerAccess"})
+@SuppressWarnings({"SpellCheckingInspection", "WeakerAccess"})
 public class LanguagePreferenceCompat extends ListPreference {
     private static final String SYSTEM_LANGUAGE_CODE = "";
 

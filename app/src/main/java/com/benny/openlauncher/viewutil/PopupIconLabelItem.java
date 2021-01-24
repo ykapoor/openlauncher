@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+
 import com.benny.openlauncher.R;
 import com.mikepenz.fastadapter.items.AbstractItem;
 

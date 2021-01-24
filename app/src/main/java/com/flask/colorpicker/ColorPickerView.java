@@ -138,9 +138,9 @@ public class ColorPickerView extends View {
 		super.onLayout(changed, left, top, right, bottom);
 
 		if (alphaSliderViewId != 0)
-			setAlphaSlider((AlphaSlider) getRootView().findViewById(alphaSliderViewId));
+			setAlphaSlider(getRootView().findViewById(alphaSliderViewId));
 		if (lightnessSliderViewId != 0)
-			setLightnessSlider((LightnessSlider) getRootView().findViewById(lightnessSliderViewId));
+			setLightnessSlider(getRootView().findViewById(lightnessSliderViewId));
 
 		updateColorWheel();
 		currentColorCircle = findNearestByColor(initialColor);
@@ -477,7 +477,7 @@ public class ColorPickerView extends View {
 			if (i == selectedColor) {
 				childLayout.setBackgroundColor(Color.WHITE);
 			}
-			ImageView childImage = (ImageView) childLayout.findViewById(R.id.image_preview);
+			ImageView childImage = childLayout.findViewById(R.id.image_preview);
 			childImage.setClickable(true);
 			childImage.setTag(i);
 			childImage.setOnClickListener(new OnClickListener() {
@@ -486,7 +486,7 @@ public class ColorPickerView extends View {
 					if (v == null)
 						return;
 					Object tag = v.getTag();
-					if (tag == null || !(tag instanceof Integer))
+					if (!(tag instanceof Integer))
 						return;
 					setSelectedColor((int) tag);
 				}
@@ -539,7 +539,7 @@ public class ColorPickerView extends View {
 		if (!(childView instanceof LinearLayout))
 			return;
 		LinearLayout childLayout = (LinearLayout) childView;
-		ImageView childImage = (ImageView) childLayout.findViewById(R.id.image_preview);
+		ImageView childImage = childLayout.findViewById(R.id.image_preview);
 		childImage.setImageDrawable(new ColorCircleDrawable(newColor));
 	}
 

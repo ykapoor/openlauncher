@@ -123,7 +123,6 @@ public class GroupPopupView extends RevealFrameLayout {
                 if (app == null || AppSettings.get().getHiddenAppsList().contains(app.getComponentName())) {
                     deleteItem(context, item, groupItem, (AppItemView) itemView);
                     appsChanged = true;
-                    continue;
                 } else {
                     final View view = ItemViewFactory.getItemView(getContext(), callback, DragAction.Action.DESKTOP, groupItem);
                     view.setOnLongClickListener(new OnLongClickListener() {

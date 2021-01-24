@@ -27,7 +27,7 @@ import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
 
-@SuppressWarnings({"WeakerAccess", "unused", "SameParameterValue", "SpellCheckingInspection", "deprecation"})
+@SuppressWarnings({"WeakerAccess", "SameParameterValue"})
 public class NetworkUtils {
     private static final String UTF8 = "UTF-8";
     public static final String GET = "GET";

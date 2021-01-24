@@ -93,7 +93,7 @@ public class ColorPickerPreference extends Preference {
 
 		ColorCircleDrawable colorChoiceDrawable = null;
 		Drawable currentDrawable = colorIndicator.getDrawable();
-		if (currentDrawable != null && currentDrawable instanceof ColorCircleDrawable)
+		if (currentDrawable instanceof ColorCircleDrawable)
 			colorChoiceDrawable = (ColorCircleDrawable) currentDrawable;
 
 		if (colorChoiceDrawable == null)
